@@ -1,0 +1,45 @@
+  
+// Navigation code here
+
+nav {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: @nav-bg;
+    color: @text;
+
+    #nav-list {
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 1% auto;
+
+      @media @mobile {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+      }
+
+      @media @tablet {
+        width: 80%;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+      }
+
+      @media @laptop {
+        width: 100%;
+        margin: 1% 0;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+      }
+
+    } //close nav-list
+  } //close nav

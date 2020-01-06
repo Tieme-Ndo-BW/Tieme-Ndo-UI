@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Della Respira', sans-serif;
+  color: #444b41;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Macondo Swash Caps', sans-serif;
+  color: #444b41;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+a,
+a:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #f9e657;
+}
+a:hover,
+a:active {
+  color: #539634;
+  background-color: #f9e657;
+}
+nav {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: #539634;
+  color: #444b41;
+}
+nav #nav-list {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1% auto;
+}
+@media (max-width: 500px) {
+  nav #nav-list {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 800px) {
+  nav #nav-list {
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 1000px) {
+  nav #nav-list {
+    width: 100%;
+    margin: 1% 0;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+header {
+  width: 100%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/farm2.jpg");
+  border: 1px solid red;
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+header .intro h2 {
+  padding: 15px;
+}
+header .intro p {
+  padding: 0 15px;
+}
+header .intro .btn {
+  width: 40%;
+  margin: 20px auto;
+}
+.body {
+  width: 800%;
+  margin: 5px 10%;
+}
+.dev-tiles {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 75px;
+}
+.dev-tiles .tile {
+  width: 45%;
+  align-self: center;
+}
+.dev-tiles .tile .dev-photo {
+  width: 20%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+}
+section.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10% 20%;
+  border: 1px solid blue;
+}
+section.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  line-height: 1.5rem;
+  font-size: 1.4rem;
+  margin: 10% 20%;
+  padding: 5% 5%;
+  border: 1px solid red;
+}
+@media (max-width: 500px) {
+  section.form form {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 800px) {
+  section.form form {
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 1000px) {
+  section.form form {
+    width: 100%;
+    margin: 1% 0;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 500px) {
+  section.form #form-pic {
+    display: none;
+  }
+}
+footer {
+  background: #539634;
+  height: 40px;
+  padding: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+@media (max-width: 500px) {
+  footer p {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 800px) {
+  footer p {
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
+@media (max-width: 1000px) {
+  footer p {
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+}
