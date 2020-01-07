@@ -160,60 +160,66 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-a,
-a:visited {
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: #ffd4ac;
-}
-a:hover,
-a:active {
-  color: #126d1e;
-  background-color: #ffd4ac;
-}
-nav {
+#nav {
   width: 100%;
-  height: 50px;
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
+}
+@media (max-width: 500px) {
+  #nav {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#nav nav {
   background-color: #126d1e;
   color: #444b41;
-}
-nav #nav-list {
-  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1% auto;
+  vertical-align: middle;
 }
 @media (max-width: 500px) {
-  nav #nav-list {
-    flex-direction: column;
-    justify-content: space-around;
+  #nav nav {
+    flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
-    align-self: center;
   }
 }
-@media (max-width: 800px) {
-  nav #nav-list {
-    width: 80%;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-  }
+#nav nav #logo {
+  float: left;
+  width: 30%;
+  margin: 5px auto;
 }
-@media (max-width: 1000px) {
-  nav #nav-list {
-    width: 100%;
-    margin: 1% 0;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-  }
+#nav nav #logo img {
+  height: 75%;
+  padding: none;
+  border: none;
+  margin: none;
+}
+#nav nav #logo img .contain {
+  width: 200px;
+  object-fit: contain;
+}
+#nav nav #nav-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+#nav nav #nav-list a,
+#nav nav #nav-list a:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #ffd4ac;
+}
+#nav nav #nav-list s a:hover,
+#nav nav #nav-list a:active {
+  font-weight: bold;
 }
 header {
   width: 100%;
@@ -274,6 +280,11 @@ header #sign-in {
   width: 40%;
   align-self: flex-start;
 }
+@media (max-width: 500px) {
+  .body .body-text {
+    width: 80%;
+  }
+}
 .body .body-img {
   width: 40%;
   height: auto;
@@ -286,6 +297,11 @@ header #sign-in {
 }
 .body .body-img img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .body .body-img img {
+    width: 80%;
+  }
 }
 .dev-tiles {
   width: 80%;
@@ -332,45 +348,28 @@ section.form {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 10% 20%;
+  margin: 5% auto;
   background-color: #cccccc;
   background-image: url("../img/market1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+  object-fit: fill;
 }
 section.form form {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: flex-start;
   line-height: 1.5rem;
   font-size: 1.4rem;
-  width: 60%;
+  width: 40%;
   margin: 10% 20%;
   padding: 5% 5%;
-  border: 1px solid red;
   background-color: beige;
 }
 @media (max-width: 500px) {
   section.form form {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-  }
-}
-@media (max-width: 800px) {
-  section.form form {
-    width: 80%;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-  }
-}
-@media (max-width: 1000px) {
-  section.form form {
-    width: 100%;
-    margin: 1% 0;
     justify-content: space-around;
     align-items: center;
     align-self: center;
@@ -388,11 +387,11 @@ section.form form #submit {
   border: none;
   border-radius: 10px;
 }
-section.form #form-pic {
+section.form #form-text {
   width: 40%;
 }
 @media (max-width: 500px) {
-  section.form #form-pic {
+  section.form #form-text {
     display: none;
   }
 }
