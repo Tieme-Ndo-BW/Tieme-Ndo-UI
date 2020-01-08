@@ -1,19 +1,26 @@
 
 // Mixins Here
-.hover-button(@bg-c, @f-c) {
-  background-color: @bg-c;
-  color: @f-c;
+.border(@color){
+  border: 1px dashed @color;
+  border-radius: 5px;
 }
 
 .button() {
   background-color: @primary;
   color: @accent;
   margin: 1% 0;
-  width: 150px;
   font-family: "Macondo Swash Caps", serif;
   font-size: 1.8rem;
   text-align: center;
+  text-decoration: none;
   padding: 1% 2%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hover-button() {
+  .button();
+  background-color: @bg;
+  cursor: pointer;
 }

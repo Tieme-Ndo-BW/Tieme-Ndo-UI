@@ -17,12 +17,17 @@
 </head>
 
 <body>
-  
         <nav>
             <div id="logo"><img class="contain" alt="Baabo logo" src="img/Baabo-logo.jpg"></div>
             <div id="nav-list">
                 <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
+                <span class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#body">About Baado</a>
+                        <a href="about.html">About the Devs</a>
+                    </div>
+                 </span>
                 <a href="contact.html">Contact Us</a>
             </div><!--close nav list-->
         </nav>
@@ -40,7 +45,7 @@
             <div class="btn" id="sign-in">Sign In</div>
         </header>
 
-        <section class="body">
+        <section class="body" id="body">
             <div class="body-text">
                 <p>
                     More information abotu what we do and who we help: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolor dignissimos itaque illo quis
