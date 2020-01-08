@@ -1,0 +1,292 @@
+
+  // MAIN PAGE CONTENT-----------------------
+
+ header {
+     
+    width: 100%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: #cccccc;
+    height: 500px;
+    background-image: url("../img/dark-farm2.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      color: white;
+
+      h2 {
+        color: white;
+        padding: 15px;
+      }
+  
+      p {
+        padding:0 15px;
+      }  
+    } //close intro
+
+    #sign-in {
+        .button();
+        width: 150px;
+       }
+
+       #sign-in:hover {
+           .hover-button();
+       }
+} //close header
+
+.body {
+    height: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    vertical-align: middle;
+    background-color: @bg;
+  
+  @media @mobile {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 100%;
+   }
+  
+   .body-text {
+        width: 40%;
+        .border(@primary);
+        padding: 20px;
+        margin: 5%;
+        color: @accent;
+        
+        @media @mobile {
+            width: 80%;
+            align-self: center;
+            justify-content: center;
+            align-content: center;
+        }
+            
+   }
+
+    .body-img {
+        width: 40%;
+        height: 200px;
+        padding: 20px;
+        margin: 5%;
+        border: none;
+        border-radius: 5px;
+        background-color: #cccccc;
+        background-image: url("../img/market2.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+
+        @media @mobile {
+            width: 80%;
+            margin-top: 0;
+            align-self: center;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+}// close .body
+
+  //ABOUT PAGE CONTENT-------------------------
+.dev-tiles {
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center; 
+    background-color: #cccccc;
+    background-image: url("../img/farmer1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+      
+    @media @mobile {
+        padding-top: 100px;
+        flex-direction: column;
+        align-content: center;
+        margin: 0;
+        justify-content: center;
+      }
+
+     .tile {
+      width: 45%;
+      height: 200px;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: @primary;
+      color: @accent;
+      .border(@bg);
+
+      @media @mobile {
+        flex-flow: row nowrap;
+        width: 100%;
+      }
+
+        .bio {
+           width: 40%;
+           padding: 5px;
+
+           @media @mobile {
+             width: 80%;
+             align-self: center;
+             justify-content: center;
+             align-content: center;
+             }
+        }
+
+        .bio-img {
+            width: 40%;
+
+            @media @mobile {
+                width: 80%;
+                align-self: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            img {
+                height: 175px;
+                padding: 5px;
+                border: 1px dashed @accent;
+                border-radius: 5px;
+                margin: none;
+                
+                .contain {
+                    object-fit: contain;
+                }
+            } //close img
+         } //close .body-img
+    }//close tile
+} // dev-tiles
+
+      
+// CONTACT PAGE CONTENT---------------------------------
+  
+section.form {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #cccccc;
+    background-image: url("../img/market1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    @media @mobile {
+        padding-top: 100px;
+        flex-direction: column;
+        align-content: center;
+        margin: 0;
+        justify-content: center;
+      }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    width: 50%;
+    margin: 10% 20%;
+    .border(@primary);
+    padding: 5% 5%;
+    background-color: @bg;
+    color: @accent;
+
+    @media @mobile {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+      }
+
+      #submit {
+          .button();
+      }
+
+      #submit:hover {
+          .hover-button();
+          .border(@primary);
+      }
+}//close form
+
+
+#form-text {
+    width: 40%;
+
+    @media @mobile {
+     display:none;
+      }
+    }// close form-pic
+}// close .form
+
+.social {
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0;
+    background-color: #cccccc;
+    background-image: url("../img/market1.jpg");
+    background-repeat: repeat;
+    background-position: 50% 30%;
+    object-fit: fill;
+
+    #icons{
+        height: 300px;
+        width: 60%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+        vertical-align: middle;
+        justify-content: space-around;
+        background-color: @primary;
+        .border(@bg);
+
+        @media @mobile {
+            width:100%;
+            flex-flow: row wrap;
+          }
+
+        .icon {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-content: center;
+            vertical-align: middle;
+            justify-content: space-around;
+
+            img {
+                height: 50px;
+                width: 50px;
+                padding: 5px;
+                margin: 5px;
+                .border(@bg);
+             }
+         } // close .icon
+    } // close #icons
+} //close .social
