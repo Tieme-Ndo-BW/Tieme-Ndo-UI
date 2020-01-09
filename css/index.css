@@ -419,14 +419,15 @@ header #sign-in:hover {
 }
 .dev-tiles {
   width: 100%;
+  height: 100%;
   margin-top: 50px;
   padding: 50px 20px;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  background-color: #cccccc;
+  background-color: #44361cf3;
   background-image: url("../img/farmer1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -443,7 +444,6 @@ header #sign-in:hover {
 }
 .dev-tiles .tile {
   width: 45%;
-  height: 200px;
   margin: 5px;
   display: flex;
   flex-direction: row;
@@ -451,47 +451,76 @@ header #sign-in:hover {
   align-items: center;
   background-color: #126d1e;
   color: #ffd4ac;
+  font-size: 1.8rem;
   border: 1px dashed #44361cf3;
   border-radius: 5px;
 }
 @media (max-width: 500px) {
   .dev-tiles .tile {
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
     width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .dev-tiles .tile {
+    width: 80%;
+    flex-direction: column-reverse;
   }
 }
 .dev-tiles .tile .bio {
   width: 40%;
+  height: 90%;
   padding: 5px;
+  overflow: hidden;
 }
 @media (max-width: 500px) {
   .dev-tiles .tile .bio {
     width: 80%;
     align-self: center;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
   }
 }
 .dev-tiles .tile .bio-img {
-  width: 40%;
+  width: 45%;
+  height: 150px;
+  padding: 20px;
+  margin: 5%;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
 }
 @media (max-width: 500px) {
   .dev-tiles .tile .bio-img {
-    width: 80%;
+    width: 30%;
+    background-position: center;
+  }
+}
+@media (max-width: 800px) {
+  .dev-tiles .tile .bio-img {
+    width: 40%;
     align-self: center;
     justify-content: center;
     align-content: center;
   }
 }
-.dev-tiles .tile .bio-img img {
-  height: 175px;
-  padding: 5px;
-  border: 1px dashed #ffd4ac;
-  border-radius: 5px;
-  margin: none;
+.dev-tiles .tile .Skye {
+  background-image: url("../img/Skye.png");
 }
-.dev-tiles .tile .bio-img img .contain {
-  object-fit: contain;
+.dev-tiles .tile .Rae {
+  background-image: url("img/Rae.jfif");
+}
+.dev-tiles .tile .Marcos {
+  background-image: url("img/Marcos.jfif");
+}
+.dev-tiles .tile .Katrina {
+  background-image: url("img/Katrina.jfif");
+}
+.dev-tiles .tile .Leslie {
+  background-image: url("img/Leslie.png");
 }
 section.form {
   width: 100%;
@@ -500,7 +529,7 @@ section.form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #cccccc;
+  background-color: #44361cf3;
   background-image: url("../img/market1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -566,38 +595,28 @@ section.form form #submit:hover {
   border: 1px dashed #126d1e;
   border-radius: 5px;
 }
-section.form #form-text {
-  width: 40%;
-}
-@media (max-width: 500px) {
-  section.form #form-text {
-    display: none;
-  }
-}
 .social {
-  height: 600px;
+  height: 400px;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
   margin: 0;
-  background-color: #cccccc;
-  background-image: url("../img/market1.jpg");
-  background-repeat: repeat;
-  background-position: 50% 30%;
-  object-fit: fill;
+  background-color: #44361cf3;
+  background-image: url("../img/market3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-top: 4px double #126d1e;
 }
 .social #icons {
-  height: 300px;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
   vertical-align: middle;
   justify-content: space-around;
-  background-color: #126d1e;
-  border: 1px dashed #44361cf3;
-  border-radius: 5px;
+  background-color: transparent;
 }
 @media (max-width: 500px) {
   .social #icons {
@@ -609,6 +628,7 @@ section.form #form-text {
   height: 100px;
   width: 100px;
   display: flex;
+  flex-flow: row nowrap;
   align-content: center;
   vertical-align: middle;
   justify-content: space-around;
@@ -618,7 +638,7 @@ section.form #form-text {
   width: 50px;
   padding: 5px;
   margin: 5px;
-  border: 1px dashed #44361cf3;
+  border: 1px dashed #126d1e;
   border-radius: 5px;
 }
 footer {
