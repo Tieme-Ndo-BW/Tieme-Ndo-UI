@@ -16,6 +16,10 @@
     background-position: 50% 0;
     background-size: cover;
 
+    @media @mobile {
+        margin: 80px auto 0 auto;
+       }
+
     .intro {
       display: flex;
       flex-direction: column;
@@ -27,10 +31,12 @@
       h2 {
         color: white;
         padding: 15px;
-      }
+        font-size: 5.8rem;
+      } //close h2
   
       p {
         padding:0 15px;
+        font-size: 1.8rem;
       }  
     } //close intro
 
@@ -55,11 +61,11 @@
     vertical-align: middle;
     background-color: @bg;
   
-  @media @mobile {
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    width: 100%;
-   }
+    @media @mobile {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        width: 100%;
+     }
   
    .body-text {
         width: 40%;
@@ -68,14 +74,23 @@
         margin: 5%;
         color: @accent;
         
+        p{
+            font-size: 1.8rem;
+        }
+
+        ul {
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            list-style-image: url("../img/icons/eco-small.png");
+        }
+
         @media @mobile {
             width: 80%;
             align-self: center;
             justify-content: center;
             align-content: center;
-        }
-            
-   }
+        }   
+    } // close .body-text
 
     .body-img {
         width: 40%;
@@ -97,13 +112,12 @@
             justify-content: center;
             align-content: center;
         }
-    }
+    } // close .body-img
 }// close .body
 
   //ABOUT PAGE CONTENT-------------------------
 .dev-tiles {
     width: 100%;
-    height: 100%;
     margin-top: 50px;
     padding: 50px 20px;
     display: flex;
@@ -123,29 +137,31 @@
         align-content: center;
         margin: 0;
         justify-content: center;
-      }
+    }
 
      .tile {
-      width: 45%;
-      margin: 5px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: @primary;
-      color: @accent;
-      font-size: 1.8rem;
-      .border(@bg);
+         width: 45%;
+         min-height: 300px;
+         margin: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: stretch;
+        background-color: @primary;
+        color: @accent;
+        font-size: 1.8rem;
+        .border(@bg);
 
-      @media @mobile {
-        flex-flow: column-reverse nowrap;
-        width: 100%;
-      }
+        @media @mobile {
+            flex-flow: column-reverse nowrap;
+            width: 100%;
+        }
 
-      @media @tablet {
-        width: 80%;
-        flex-direction: column-reverse;
-    }
+        @media @tablet {
+            width: 80%;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
 
         .bio {
            width: 40%;
@@ -159,11 +175,16 @@
              justify-content: center;
              align-content: flex-start;
              }
-        }
+             
+             @media @tablet {
+                width: 80%;
+                background-position: center;
+            }
+        } //close .bio
 
         .bio-img {
-            width: 45%;
-            height: 150px;
+            width: 30%;
+            height: 200px;
             padding: 20px;
             margin: 5%;
             border: none;
@@ -174,16 +195,14 @@
             background-position: top center;
 
             @media @mobile {
-                width: 30%;
+                width: 50%;
+                align-items: stretch;
                 background-position: center;
-
             }
 
             @media @tablet {
-                width: 40%;
-                align-self: center;
-                justify-content: center;
-                align-content: center;
+                width: 30%;
+                background-position: center;
             }
         } //close .bio-img
 
@@ -191,25 +210,24 @@
                 background-image: url("../img/Skye.png");
             }
             .Rae{
-                background-image: url("img/Rae.jfif");
+                background-image: url("../img/Rae.png");
             }
             .Marcos{
-                background-image: url("img/Marcos.jfif");
+                background-image: url("../img/Marcos.png");
             }
             .Katrina{
-                background-image: url("img/Katrina.jfif");
+                background-image: url("../img/Katrina.png");
             }
             .Leslie{
-                background-image: url("img/Leslie.png");
+                background-image: url("../img/Leslie.png");
             }
-
     }//close tile
 } // dev-tiles
 
       
 // CONTACT PAGE CONTENT---------------------------------
   
-section.form {
+.form {
     width: 100%;
     margin-top: 0;
     padding-top: 25px;
@@ -245,6 +263,7 @@ section.form {
         color: @accent;
 
         @media @mobile {
+            width: 60%;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
@@ -263,7 +282,7 @@ section.form {
 }// close .form
 
 .social {
-    height: 400px;
+    height: 700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -289,24 +308,35 @@ section.form {
 
         @media @mobile {
             width:100%;
-            flex-flow: row wrap;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
           }
 
         .icon {
             height: 100px;
             width: 100px;
             display: flex;
-            flex-flow: row nowrap;
-            align-content: center;
-            vertical-align: middle;
-            justify-content: space-around;
+            flex-direction: row;
+            justify-content: center;
+            background-color: @bg;
+            .animation();
+            .border(@primary);
+
+            @media @mobile {
+                width: 60%;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 5px 0;
+              }
 
             img {
                 height: 50px;
                 width: 50px;
                 padding: 5px;
                 margin: 5px;
-                .border(@primary);
+                align-self: center;
              }
          } // close .icon
     } // close #icons
