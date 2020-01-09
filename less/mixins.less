@@ -24,3 +24,26 @@
   background-color: @bg;
   cursor: pointer;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes greenbrown {
+  0% {background-color: @bg;}
+  50% {background-color: @primary;}
+}
+          
+/* Standard syntax */
+@keyframes greenbrown {
+  0% {background-color: @bg;}
+  50% {background-color: @primary;}
+}
+
+.animation() {
+  -webkit-animation-name: greenbrown; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+  // -webkit-animation-direction: ; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: greenbrown;
+  animation-duration: 6s;
+  // animation-direction: ;
+  animation-iteration-count: infinite;
+}
